@@ -2,8 +2,8 @@
 
 //Funcion para la validacion de los datos ingresados por el DOM
 function validar(formulario) {
-    let valor = formulario.campo1.value;
-    var puntos = 0;
+    const valor = formulario.campo1.value;
+    let puntos = 0;
     if (valor.length == 0){
         alert('Ingresa un número');
         return false;
@@ -30,7 +30,7 @@ function validar(formulario) {
 
 //Cuenta las cifras del numero entre 0 - 9.999
 function contarCifras(num){
-    var x;
+    let x;
     let cifras = []
     for( x of num){
         if ( x !== "."){

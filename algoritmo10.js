@@ -1,1 +1,1 @@
-//Pedir tres números y mostrarlos ordenados de mayor a menor.
+//Pedir un número entre 0 y 9.999 y decir cuantas cifras tiene.

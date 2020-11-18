@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <script>
+            function Valida(formulario) {
+              if (formulario.campo1.value.length == 0){
+                  alert('Ingresa un número');
+                  return false
+              }   
+              if (isNaN(n1=parseInt(formulario.campo1.value))) {
+                  alert('El valor que ingresaste NO es un número');
+                  return false;
+              }
+              if (n1 < 0 || n1 > 9.999) {
+                  alert('Ingrese un número entre 0 y 9.999');
+                  return false;
+              }
+              if (formulario.campo1.value.length === 1){
+                  alert("Este número tiene 1 cifra");
+                  return false;
+              }else{
+                let dato = Object(formulario.campo1.value.length);
+                //cifras = dato.split(".");
+                alert("Este número tiene " + dato + " cifras");
+              }
+              
+            }
+        </script>
+    </head>
+    <body>
+        <form name="miFormulario" onSubmit="return Valida(this);">
+            <h1>Ingrese un número entre 0 y 9.999</h1>
+            [0, 9.999] <input type="text" name="campo1"><br>
+            <input type="submit" value="Cifras" name="enviar">
+        </form>
+    </body> 
+</html>

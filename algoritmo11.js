@@ -25,14 +25,14 @@ function validar(formulario) {
             return false;
         }
     }
-    return contarCifras(valor); 
+    return cambiarOrden(valor); 
 }
 
 //Cuenta las cifras del numero entre 0 - 9.999
-function contarCifras(num){
+function cambiarOrden(num){
     let alreves = num.charAt(num.length-1).concat('.');
     for( i=2; i<=num.length ; i++){
-        cifra = num.charAt(num.length-i);
+        let cifra = num.charAt(num.length-i);
         if(cifra === '.') continue;
         alreves = alreves.concat(cifra);
     } 

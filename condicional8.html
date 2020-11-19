@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condicional 8</title>
+</head>
+<body>
+    <form name="miFormulario" onSubmit="return validar(this);">
+        <h1>Ingrese un número</h1>
+        <input type="text" name="campo1"><br>
+        <input type="submit" value="Serie" name="enviar">
+    </form>
+    <h1>El listado desde el 1 hasta el número ingresado es:</h1>
+    <ul id="lista-dinamica"></ul>
+    <template id="template-li">
+        <li class="list">
+            <b><span class="text-danger">${item}</span></b>
+        </li>
+    </template>
+    <script src="condicional8.js"></script>
+</body>
+</html>

@@ -31,7 +31,7 @@ function validar(formulario) {
 //Cuenta las cifras del numero entre 0 - 9.999
 function contarCifras(num){
     let x;
-    let cifras = []
+    let cifras = [];
     for( x of num){
         if ( x !== "."){
             cifras.push(x);

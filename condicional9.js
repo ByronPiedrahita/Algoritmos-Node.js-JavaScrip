@@ -17,7 +17,6 @@ serie();
 arrayItem.forEach((item) => {
   template.querySelector('.list span').textContent = item;
   const clone = template.cloneNode(true);
-  //const clone = document.importNode(template, true);
   fragment.appendChild(clone);
 });
 

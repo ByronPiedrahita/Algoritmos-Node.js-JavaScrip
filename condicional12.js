@@ -34,5 +34,5 @@ function factorial(num){
     for( i=1 ; i <= num ; i++){
         factorialnum *= i;
     }
-    alert(`Este número factorial de ${num} es ${factorialnum}` );
+    alert(`El número factorial de ${num} es ${factorialnum}` );
 }

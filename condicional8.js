@@ -2,11 +2,14 @@
 const lista = document.getElementById('lista-dinamica');
 const template = document.querySelector('#template-li').content;
 const fragment = document.createDocumentFragment();
-let arrayItem=[];
+const arrayItem=[];
+
+const num = prompt('Ingrese un número', '');
+
+validar(num);
 
 //Funcion para la validacion de los datos ingresados por el DOM
-function validar(formulario) {
-    let valor = formulario.campo1.value;
+function validar(valor) {
     var puntos = 0;
     if (valor.length == 0){
         alert('Ingresa un número');
@@ -25,22 +28,22 @@ function validar(formulario) {
             return false;
         }
     }
+    
     return listar(valor); 
 }
 
-//Lista los numeros desde el 1 hasta el número ingresado
-function listar(num){
-    for(i=1; i <= num; i++){
+//Lista desde el 1 hasta el número ingresado
+function listar(_num){
+    for(i=1; i <=_num; i++){
         arrayItem.push(i);
     }
-    //alert(arrayItem);
-    arrayItem.forEach((item) => {
-        template.querySelector('.list span').textContent = item;
-        const clone = template.cloneNode(true);
-        fragment.appendChild(clone);
-      });
-      
-      lista.appendChild(fragment);
+    return arrayItem;
 }
 
+arrayItem.forEach((item) => {
+  template.querySelector('.list span').textContent = item;
+  const clone = template.cloneNode(true);
+  fragment.appendChild(clone);
+});
 
+lista.appendChild(fragment);
